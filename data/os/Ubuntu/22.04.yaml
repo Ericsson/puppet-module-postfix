@@ -3,7 +3,7 @@ postfix::main_biff: 'no'
 postfix::main_append_dot_mydomain: 'no'
 postfix::main_readme_directory: 'no'
 postfix::main_compatibility_level: '3.6'
-postfix::main_mydestination: "$myhostname, %{hostname}, localhost.localdomain, localhost"
+postfix::main_mydestination: "$myhostname, %{facts.networking.hostname}, localhost.localdomain, localhost"
 postfix::main_smtpd_tls_cert_file: '/etc/ssl/certs/ssl-cert-snakeoil.pem'
 postfix::main_smtpd_tls_key_file: '/etc/ssl/certs/ssl-cert-snakeoil.key'
 postfix::main_smtpd_tls_security_level: 'may'
