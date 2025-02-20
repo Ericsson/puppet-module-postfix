@@ -18,7 +18,7 @@ This module provides OS default values for these OSfamilies:
  * RedHat 8/9
  * Rocky 8/9
  * Suse 12/15
- * Ubuntu 20.04/22.04
+ * Ubuntu 20.04/22.04/24.04
 
 
 
