@@ -8,17 +8,17 @@ The module installs and configures Postfix MTA to relay local mail to a relayhos
 # Compatability #
 
 This module has been tested to work on the following systems with Puppet
-versions 5, 6 and 7 with the Ruby version associated with those releases.
+versions 7 and 8 with the Ruby version associated with those releases.
 This module aims to support the current and previous major Puppet versions.
 
 This module provides OS default values for these OSfamilies:
 
  * AlmaLinux 8/9
- * Debian 6/7
- * RedHat 5/6/7/8/9
+ * CentOS 8/9
+ * RedHat 8/9
  * Rocky 8/9
- * Suse 10/11/12/15
- * Ubuntu 14.04/16.04/18.04/20.04/22.04
+ * Suse 12/15
+ * Ubuntu 20.04/22.04/24.04
 
 
 
