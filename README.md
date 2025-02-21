@@ -14,6 +14,7 @@ This module aims to support the current and previous major Puppet versions.
 This module provides OS default values for these OSfamilies:
 
  * AlmaLinux 8/9
+ * CentOS 8/9
  * RedHat 8/9
  * Rocky 8/9
  * Suse 12/15
