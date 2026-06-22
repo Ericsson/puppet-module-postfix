@@ -4,10 +4,10 @@ default:
   images:
     - 'litmusimage/almalinux:8'
     - 'litmusimage/almalinux:9'
-    - 'litmusimage/centos:stream8'
     - 'litmusimage/centos:stream9'
     - 'litmusimage/rockylinux:8'
     - 'litmusimage/rockylinux:9'
+    - 'litmusimage/rockylinux:10'
     - 'litmusimage/ubuntu:20.04'
     - 'litmusimage/ubuntu:22.04'
     - 'litmusimage/ubuntu:24.04'
