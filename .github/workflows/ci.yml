@@ -3,17 +3,26 @@ name: "CI"
 
 on:
   pull_request:
+  push:
+    branches:
+      - main
+      - master
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  Spec:
-    uses: "puppetlabs/cat-github-actions/.github/workflows/module_ci.yml@main"
-    secrets: "inherit"
+  puppet:
+    name: "Puppet / Unit"
+    uses: "voxpupuli/gha-puppet/.github/workflows/basic.yml@v3"
+    with:
+      puppet_version: '["~> 8.0"]'
 
-  Acceptance:
-    needs: Spec
-    uses: "puppetlabs/cat-github-actions/.github/workflows/module_acceptance.yml@main"
-    secrets: "inherit"
+  acceptance:
+    name: "Puppet / Acceptance"
+    needs: puppet
+    uses: "voxpupuli/gha-puppet/.github/workflows/beaker.yml@v3"
+    with:
+      puppet_version: '["~> 8.0"]'
+      beaker_setfile: '["centos8-64", "centos9-64", "rocky8-64", "rocky9-64", "rocky10-64", "sles15-64", "ubuntu2204-64", "ubuntu2404-64"]'
